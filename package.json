@@ -1,0 +1,35 @@
+{
+  "name": "meta-mesh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "exec": "node dist",
+    "build": "tsc",
+    "dev": "tsc --watch & nodemon dist",
+    "test": "mocha",
+    "lint": "eslint src --ext ts",
+    "tsc": "tsc",
+    "docker:publish": "npx dockflow publish"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@chainsafe/libp2p-gossipsub": "^11.2.1",
+    "@orbitdb/core": "^2.0.1",
+    "dotenv": "^16.4.1",
+    "helia": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.16",
+    "chai": "^5.0.3",
+    "eslint": "8.56.0",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "typescript-eslint-parser": "22.0.0"
+  }
+}
