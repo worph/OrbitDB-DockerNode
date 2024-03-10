@@ -152,7 +152,7 @@ export class DistributedDB {
         }
         this.libp2p = await createLibp2p(libp2pOptions);
         this.ipfs = await createHelia({ libp2p:this.libp2p });
-        this.orbitdb = await createOrbitDB({ ipfs:this.ipfs,id:"admin", directory: './keystore' });
+        this.orbitdb = await createOrbitDB({ ipfs:this.ipfs,id:"admin", directory: './data' });
         // Create / Open a database. Defaults to db type "events".
         this.db = await this.orbitdb.open(process.env.DB_NAME, {
             AccessController: OrbitDBAccessController({ write: ['*'] }),

@@ -52,8 +52,8 @@ docker build -t orbitdb-node .
          HOST: "51.159.100.53"
          BOOTSTRAP: "/ip4/51.159.100.53/tcp/4001/p2p/QmYourPeerId" # Use when connecting nodes together
        volumes:
-         - "./keystore:/app/keystore"
-         - "./peer-id.json:/app/peer-id.json"
+         - "./data:/app/data" # the orbitdb data (keystore, data, etc.)
+         - "./peer-id.json:/app/peer-id.json" # the peer id of the node (public and private key) secret
        restart: unless-stopped
    ```
 
